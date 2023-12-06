@@ -1,3 +1,4 @@
-## 0.0.1
+# Changelog 0.0.1-beta
 
-* TODO: Describe initial release.
+## [0.0.1-beta] - 2023-12-06
+Initial release.
