@@ -12,15 +12,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       themeMode: ThemeMode.light,
-      theme: NeumorphicThemeData(
+      theme: const NeumorphicThemeData(
         baseColor: Color(0xFFFFFFFF),
         lightSource: LightSource.topLeft,
-        brightness: Brightness.light,
         depth: 10,
       ),
-      darkTheme: NeumorphicThemeData(
+      darkTheme: const NeumorphicThemeData(
         baseColor: Color(0xFF3E3E3E),
-        brightness: Brightness.dark,
         lightSource: LightSource.topLeft,
         depth: 6,
       ),

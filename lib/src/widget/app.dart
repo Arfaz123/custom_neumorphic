@@ -80,6 +80,7 @@ class NeumorphicApp extends StatelessWidget {
         primarySwatch: color,
         textTheme: theme.textTheme,
         iconTheme: theme.iconTheme,
+        // brightness: theme.brightness,
         scaffoldBackgroundColor: theme.baseColor,
       );
     }
@@ -94,7 +95,7 @@ class NeumorphicApp extends StatelessWidget {
       //     ThemeData.estimateBrightnessForColor(theme.variantColor),
       textTheme: theme.textTheme,
       scaffoldBackgroundColor: theme.baseColor,
-      colorScheme: ColorScheme.fromSwatch().copyWith(secondary: theme.variantColor),
+      // colorScheme: ColorScheme.fromSwatch().copyWith(secondary: theme.variantColor),
     );
   }
 

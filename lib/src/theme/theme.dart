@@ -25,7 +25,6 @@ const Color _defaultTextColor = NeumorphicColors.defaultTextColor;
 const LightSource _defaultLightSource = LightSource.topLeft;
 const Color _defaultBaseColor = NeumorphicColors.background;
 const double _defaultBorderSize = 0.3;
-const Brightness _defaultBrightness = NeumorphicColors.darkBrightness;
 
 /// Used with the NeumorphicTheme
 ///
@@ -49,7 +48,6 @@ class NeumorphicThemeData {
   final Color accentColor;
   final Color variantColor;
   final Color disabledColor;
-  final Brightness brightness;
 
   final Color shadowLightColor;
   final Color shadowDarkColor;
@@ -86,7 +84,6 @@ class NeumorphicThemeData {
       _intensity.clamp(Neumorphic.MIN_INTENSITY, Neumorphic.MAX_INTENSITY);
 
   const NeumorphicThemeData({
-    this.brightness = _defaultBrightness,
     this.baseColor = _defaultBaseColor,
     double depth = _defaultDepth,
     NeumorphicBoxShape? boxShape,
@@ -112,7 +109,6 @@ class NeumorphicThemeData {
         this._intensity = intensity;
 
   const NeumorphicThemeData.dark({
-    this.brightness = _defaultBrightness,
     this.baseColor = NeumorphicColors.darkBackground,
     double depth = _defaultDepth,
     NeumorphicBoxShape? boxShape,
@@ -139,7 +135,7 @@ class NeumorphicThemeData {
 
   @override
   String toString() {
-    return 'NeumorphicTheme{brightness: $brightness, baseColor: $baseColor, boxShape: $boxShape, disableDepth: $disableDepth, accentColor: $accentColor, variantColor: $variantColor, disabledColor: $disabledColor, _depth: $_depth, intensity: $intensity, lightSource: $lightSource}';
+    return 'NeumorphicTheme{baseColor: $baseColor, boxShape: $boxShape, disableDepth: $disableDepth, accentColor: $accentColor, variantColor: $variantColor, disabledColor: $disabledColor, _depth: $_depth, intensity: $intensity, lightSource: $lightSource}';
   }
 
   @override
@@ -147,7 +143,6 @@ class NeumorphicThemeData {
       identical(this, other) ||
       other is NeumorphicThemeData &&
           runtimeType == other.runtimeType &&
-          brightness == other.brightness &&
           baseColor == other.baseColor &&
           boxShape == other.boxShape &&
           textTheme == other.textTheme &&
@@ -171,7 +166,6 @@ class NeumorphicThemeData {
 
   @override
   int get hashCode =>
-      brightness.hashCode ^
       baseColor.hashCode ^
       textTheme.hashCode ^
       iconTheme.hashCode ^
@@ -196,7 +190,6 @@ class NeumorphicThemeData {
   /// Create a copy of this theme
   /// With possibly new values given from this method's arguments
   NeumorphicThemeData copyWith({
-    Brightness? brightness,
     Color? baseColor,
     Color? accentColor,
     Color? variantColor,
@@ -220,7 +213,6 @@ class NeumorphicThemeData {
     LightSource? lightSource,
   }) {
     return NeumorphicThemeData(
-      brightness: brightness ?? this.brightness,
       baseColor: baseColor ?? this.baseColor,
       textTheme: textTheme ?? this.textTheme,
       iconTheme: iconTheme ?? this.iconTheme,
@@ -252,7 +244,6 @@ class NeumorphicThemeData {
     required NeumorphicThemeData other,
   }) {
     return NeumorphicThemeData(
-      brightness: other.brightness,
       baseColor: other.baseColor,
       accentColor: other.accentColor,
       variantColor: other.variantColor,

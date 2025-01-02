@@ -12,7 +12,6 @@ class NeumorphicColors {
   static const variant = Color(0xFF00BCD4);
   static const disabled = Color(0xFF9E9E9E);
 
-  static const darkBrightness = Brightness.light;
   static const darkBackground = Color(0xFF2D2F2F);
   static const darkAccent = Color(0xFF4CAF50);
   static const darkVariant = Color(0xFF607D8B);
