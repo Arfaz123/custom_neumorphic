@@ -15,13 +15,19 @@ class MyApp extends StatelessWidget {
       theme: NeumorphicThemeData(
         baseColor: Color(0xFFFFFFFF),
         lightSource: LightSource.topLeft,
+        brightness: Brightness.light,
         depth: 10,
       ),
       darkTheme: NeumorphicThemeData(
         baseColor: Color(0xFF3E3E3E),
+        brightness: Brightness.dark,
         lightSource: LightSource.topLeft,
         depth: 6,
       ),
+      // materialTheme: ThemeData(
+      //   brightness: Brightness.light, // Ensure this is set
+      //   colorScheme: ColorScheme.light(), // Match brightness here
+      // ),
       home: MyHomePage(),
     );
   }
